@@ -188,7 +188,7 @@ Resources:
                   !GetAtt RdsInstance.Endpoint.Address, #endpoint
                   !Ref RDSMasterUsernameParam, #username
                   !Ref RDSMasterUserPasswordParam, #password
-                  "navitaire" #database name
+                  "patdb" #database name
                 ]
               ]
             ]
