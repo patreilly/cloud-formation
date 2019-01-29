@@ -1,0 +1,9 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverrid
+.pem
+
+# any parameters directory
+parameters/
