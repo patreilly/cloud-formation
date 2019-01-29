@@ -1,2 +1,2 @@
-# cloud-formation
-A repo for AWS Cloud Formation Templates
+# cloudformation
+all cloudformation templates I use to help with development
