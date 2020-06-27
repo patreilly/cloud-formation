@@ -108,7 +108,7 @@ Parameters:
 
   MyIpAddress:
     Type: String
-
+    
 Resources:
 
   RdsSubnetGroup:
@@ -146,9 +146,12 @@ Resources:
     Properties:
       InstanceType: t2.micro
       SecurityGroupIds: [!Ref BastionInstanceSecurityGroup]
-      SubnetId: !Ref PublicSubnetParam
       ImageId: !Ref LatestAmiId
       KeyName: pat-keypair
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          SubnetId: !Ref PublicSubnetParam
+          DeviceIndex: "0"
       UserData:
         Fn::Base64:
           !Join [
